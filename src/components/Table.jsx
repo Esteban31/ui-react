@@ -21,8 +21,24 @@ function Table(){
 
 
 
+    const getToken = async() =>{
+
+        const body={
+            "username": "diroperativa@dinamicatecnologica.com",
+            "access_key": "YmM0ZDVhOTktMTE1Yi00NWFlLTkzNTItMTcwY2ZkYWI4YTdmOmROdVF4KTA0NlA="
+        }
+
+        const req = await axios.post("https://api.siigo.com/auth",body)
+
+        console.log(req)
+    }
+
+
+
     //LOAD DATA FUNCTION
     const loadData = async (data) => {
+
+        getToken()
 
         // const config = {
         //     headers:{
@@ -30,24 +46,24 @@ function Table(){
         //     }
         // };
 
-        const token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IkQ3OTkxNEU2MTJFRkI4NjE5RDNFQ0U4REFGQTU0RDFBMDdCQjM5QjJSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6IjE1a1U1aEx2dUdHZFBzNk5yNlZOR2dlN09iSSJ9.eyJuYmYiOjE2ODE1ODc4MDQsImV4cCI6MTY4MTY3NDIwNCwiaXNzIjoiaHR0cDovL21zLXNlY3VyaXR5c2VydmljZTo1MDAwIiwiYXVkIjoiaHR0cDovL21zLXNlY3VyaXR5c2VydmljZTo1MDAwL3Jlc291cmNlcyIsImNsaWVudF9pZCI6IlNpaWdvQVBJIiwic3ViIjoiMTE5NjI4MSIsImF1dGhfdGltZSI6MTY4MTU4NzgwNCwiaWRwIjoibG9jYWwiLCJuYW1lIjoiZGlyb3BlcmF0aXZhQGRpbmFtaWNhdGVjbm9sb2dpY2EuY29tIiwibWFpbF9zaWlnbyI6ImRpcm9wZXJhdGl2YUBkaW5hbWljYXRlY25vbG9naWNhLmNvbSIsImNsb3VkX3RlbmFudF9jb21wYW55X2tleSI6IkRJTkFNSUNBVEVDTk9MT0dJQ0FTQVMiLCJ1c2Vyc19pZCI6IjI1NTIiLCJ0ZW5hbnRfaWQiOiIweDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMjEwMjk1IiwidXNlcl9saWNlbnNlX3R5cGUiOiIwIiwicGxhbl90eXBlIjoiMTQiLCJ0ZW5hbnRfc3RhdGUiOiIxIiwibXVsdGl0ZW5hbnRfaWQiOiIxNTMiLCJjb21wYW5pZXMiOiIwIiwiYXBpX3N1YnNjcmlwdGlvbl9rZXkiOiI1ODRiNDczYzA0YTU0OTI5YWVlMDdlZjc1YmUyOGMzZiIsImFjY291bnRhbnQiOiJmYWxzZSIsImp0aSI6IjVGNTlENTM4QjExQ0FDQkFGMDg2QjNDOTIzOURCNDE0IiwiaWF0IjoxNjgxNTg3ODA0LCJzY29wZSI6WyJTaWlnb0FQSSJdLCJhbXIiOlsiY3VzdG9tIl19.BZaEtcP6WRIVSYbY79wJ7wv_zLJUT8TvGdSY3SzAScDI2Zh0Ti2gCLUks8QQorMs48BtWg7P4nSufEmH7JTLmrkJ8Y8xqRes2SQPM3iM7gMO20tccHJogh7LAze2gsY_bWyqc9skXwif7OZsoDmh_qz-hPhebX-LKjvL0_Kmv-2jAhClDPBPTL34WO0YSYTCTlWKWJzEnDbCmNpAE-us-Axiz5v1ibet3TUi6ZfB3Vn0UBczgvPXj28ZytBkyQzcmQH3iJQum4mTSBaoZKl72gEypy7MIyQvcVn-E2Gk2YWpXTuMVjPzDeyJ7CutW-Wb2VX84XXTJ36CWw17ul5vAQ"
+        // const token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IkQ3OTkxNEU2MTJFRkI4NjE5RDNFQ0U4REFGQTU0RDFBMDdCQjM5QjJSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6IjE1a1U1aEx2dUdHZFBzNk5yNlZOR2dlN09iSSJ9.eyJuYmYiOjE2ODE1ODc4MDQsImV4cCI6MTY4MTY3NDIwNCwiaXNzIjoiaHR0cDovL21zLXNlY3VyaXR5c2VydmljZTo1MDAwIiwiYXVkIjoiaHR0cDovL21zLXNlY3VyaXR5c2VydmljZTo1MDAwL3Jlc291cmNlcyIsImNsaWVudF9pZCI6IlNpaWdvQVBJIiwic3ViIjoiMTE5NjI4MSIsImF1dGhfdGltZSI6MTY4MTU4NzgwNCwiaWRwIjoibG9jYWwiLCJuYW1lIjoiZGlyb3BlcmF0aXZhQGRpbmFtaWNhdGVjbm9sb2dpY2EuY29tIiwibWFpbF9zaWlnbyI6ImRpcm9wZXJhdGl2YUBkaW5hbWljYXRlY25vbG9naWNhLmNvbSIsImNsb3VkX3RlbmFudF9jb21wYW55X2tleSI6IkRJTkFNSUNBVEVDTk9MT0dJQ0FTQVMiLCJ1c2Vyc19pZCI6IjI1NTIiLCJ0ZW5hbnRfaWQiOiIweDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMjEwMjk1IiwidXNlcl9saWNlbnNlX3R5cGUiOiIwIiwicGxhbl90eXBlIjoiMTQiLCJ0ZW5hbnRfc3RhdGUiOiIxIiwibXVsdGl0ZW5hbnRfaWQiOiIxNTMiLCJjb21wYW5pZXMiOiIwIiwiYXBpX3N1YnNjcmlwdGlvbl9rZXkiOiI1ODRiNDczYzA0YTU0OTI5YWVlMDdlZjc1YmUyOGMzZiIsImFjY291bnRhbnQiOiJmYWxzZSIsImp0aSI6IjVGNTlENTM4QjExQ0FDQkFGMDg2QjNDOTIzOURCNDE0IiwiaWF0IjoxNjgxNTg3ODA0LCJzY29wZSI6WyJTaWlnb0FQSSJdLCJhbXIiOlsiY3VzdG9tIl19.BZaEtcP6WRIVSYbY79wJ7wv_zLJUT8TvGdSY3SzAScDI2Zh0Ti2gCLUks8QQorMs48BtWg7P4nSufEmH7JTLmrkJ8Y8xqRes2SQPM3iM7gMO20tccHJogh7LAze2gsY_bWyqc9skXwif7OZsoDmh_qz-hPhebX-LKjvL0_Kmv-2jAhClDPBPTL34WO0YSYTCTlWKWJzEnDbCmNpAE-us-Axiz5v1ibet3TUi6ZfB3Vn0UBczgvPXj28ZytBkyQzcmQH3iJQum4mTSBaoZKl72gEypy7MIyQvcVn-E2Gk2YWpXTuMVjPzDeyJ7CutW-Wb2VX84XXTJ36CWw17ul5vAQ"
 
-        // // const req = await axios.get("https://api.siigo.com/v1/invoices", {} ,config)
+        // // // const req = await axios.get("https://api.siigo.com/v1/invoices", {} ,config)
 
 
-        const req = await axios.post('https://api.siigo.com/v1/invoices', { hello: 'world' }, {
-        headers: {
-            // 'application/json' is the modern content-type for JSON, but some
-            // older servers may use 'text/json'.
-            // See: http://bit.ly/text-json
-            'Authorization':token,
-            'content-type': 'text/json',
-            'Access-Control-Allow-Origin': '*',
-            'origin':'x-requested-with',
-        }
-        });
+        // const req = await axios.post('https://api.siigo.com/v1/invoices', { hello: 'world' }, {
+        // headers: {
+        //     // 'application/json' is the modern content-type for JSON, but some
+        //     // older servers may use 'text/json'.
+        //     // See: http://bit.ly/text-json
+        //     'Authorization':token,
+        //     'content-type': 'text/json',
+        //     'Access-Control-Allow-Origin': '*',
+        //     'origin':'x-requested-with',
+        // }
+        // });
 
-        console.log(req)
+        // console.log(req)
 
         let results = data.results.map((value, index)=>
             <tr key={value.id} style={{cursor:'pointer'}} onClick={() => navigate('detail/'+value.name[0]+"-"+value.name[1])}>
