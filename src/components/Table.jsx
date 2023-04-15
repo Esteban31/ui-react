@@ -23,12 +23,18 @@ function Table(){
 
     const getToken = async() =>{
 
+        const config={
+            headers:{
+                " Access-Control-Allow-Origin": "*"
+            }
+        }
+
         const body={
             "username": "diroperativa@dinamicatecnologica.com",
             "access_key": "YmM0ZDVhOTktMTE1Yi00NWFlLTkzNTItMTcwY2ZkYWI4YTdmOmROdVF4KTA0NlA="
         }
 
-        const req = await axios.post("https://api.siigo.com/auth",body)
+        const req = await axios.post("https://api.siigo.com/auth",body, config)
 
         console.log(req)
     }
