@@ -1,0 +1,670 @@
+{
+    "pagination": {
+        "page": 1,
+        "page_size": 25,
+        "total_results": 253
+    },
+    "results": [
+        {
+            "id": "6b6ceb28-b2eb-4b98-b3dd-26648a933c81",
+            "type": "Customer",
+            "person_type": "Person",
+            "id_type": {
+                "code": "13",
+                "name": "Cédula de ciudadanía"
+            },
+            "identification": "13832081",
+            "check_digit": "4",
+            "name": [
+                "lucia",
+                "Robles"
+            ],
+            "commercial_name": "Siigo",
+            "branch_office": 0,
+            "active": true,
+            "vat_responsible": true,
+            "fiscal_responsibilities": [
+                {
+                    "code": "R-99-PN",
+                    "name": "No responsable"
+                }
+            ],
+            "address": {
+                "address": "Cra. 18 #79A - 42",
+                "city": {
+                    "country_code": "Co",
+                    "country_name": "Colombia",
+                    "state_code": "19",
+                    "state_name": "Cauca",
+                    "city_code": "19001",
+                    "city_name": "Cali"
+                },
+                "postal_code": "110911"
+            },
+            "phones": [
+                {
+                    "indicative": "57",
+                    "number": "3213567",
+                    "extension": "132"
+                }
+            ],
+            "contacts": [
+                {
+                    "first_name": "Marcos",
+                    "last_name": "Castillo",
+                    "email": "lucia.robles@contacto.com",
+                    "phone": {
+                        "indicative": "57",
+                        "number": "3006003345",
+                        "extension": "132"
+                    }
+                }
+            ],
+            "comments": "Comentarios",
+            "related_users": {
+                "seller_id": 629,
+                "collector_id": 629
+            },
+            "metadata": {
+                "created": "2020-06-15T03:33:17.208Z",
+                "last_updated": "null"
+            }
+        },
+        {
+            "id": "6b6ceb28-b2eb-4b98-b3dd-26648a933c82",
+            "type": "Personal",
+            "person_type": "Person",
+            "id_type": {
+                "code": "13",
+                "name": "Cédula de ciudadanía"
+            },
+            "identification": "13832081",
+            "check_digit": "4",
+            "name": [
+                "Marcos",
+                "Castillo"
+            ],
+            "commercial_name": "Siigo",
+            "branch_office": 0,
+            "active": true,
+            "vat_responsible": true,
+            "fiscal_responsibilities": [
+                {
+                    "code": "R-99-PN",
+                    "name": "No responsable"
+                }
+            ],
+            "address": {
+                "address": "Cra. 18 #79A - 42",
+                "city": {
+                    "country_code": "Co",
+                    "country_name": "Colombia",
+                    "state_code": "19",
+                    "state_name": "Cauca",
+                    "city_code": "19001",
+                    "city_name": "Popayán"
+                },
+                "postal_code": "110911"
+            },
+            "phones": [
+                {
+                    "indicative": "57",
+                    "number": "3006003345",
+                    "extension": "132"
+                }
+            ],
+            "contacts": [
+                {
+                    "first_name": "Marcos",
+                    "last_name": "Castillo",
+                    "email": "marcos.castillo@contacto.com",
+                    "phone": {
+                        "indicative": "57",
+                        "number": "3006003345",
+                        "extension": "132"
+                    }
+                }
+            ],
+            "comments": "Comentarios",
+            "related_users": {
+                "seller_id": 629,
+                "collector_id": 629
+            },
+            "metadata": {
+                "created": "2020-06-15T03:33:17.208Z",
+                "last_updated": "null"
+            }
+        },
+        {
+            "id": "6b6ceb28-b2eb-4b98-b3dd-26648a933c82",
+            "type": "Personal",
+            "person_type": "Person",
+            "id_type": {
+                "code": "13",
+                "name": "Cédula de ciudadanía"
+            },
+            "identification": "13832081",
+            "check_digit": "4",
+            "name": [
+                "Marcos",
+                "Castillo"
+            ],
+            "commercial_name": "Siigo",
+            "branch_office": 0,
+            "active": true,
+            "vat_responsible": true,
+            "fiscal_responsibilities": [
+                {
+                    "code": "R-99-PN",
+                    "name": "No responsable"
+                }
+            ],
+            "address": {
+                "address": "Cra. 18 #79A - 42",
+                "city": {
+                    "country_code": "Co",
+                    "country_name": "Colombia",
+                    "state_code": "19",
+                    "state_name": "Cauca",
+                    "city_code": "19001",
+                    "city_name": "Popayán"
+                },
+                "postal_code": "110911"
+            },
+            "phones": [
+                {
+                    "indicative": "57",
+                    "number": "3006003345",
+                    "extension": "132"
+                }
+            ],
+            "contacts": [
+                {
+                    "first_name": "Marcos",
+                    "last_name": "Castillo",
+                    "email": "marcos.castillo@contacto.com",
+                    "phone": {
+                        "indicative": "57",
+                        "number": "3006003345",
+                        "extension": "132"
+                    }
+                }
+            ],
+            "comments": "Comentarios",
+            "related_users": {
+                "seller_id": 629,
+                "collector_id": 629
+            },
+            "metadata": {
+                "created": "2020-06-15T03:33:17.208Z",
+                "last_updated": "null"
+            }
+        },
+        {
+            "id": "6b6ceb28-b2eb-4b98-b3dd-26648a933c82",
+            "type": "Personal",
+            "person_type": "Person",
+            "id_type": {
+                "code": "13",
+                "name": "Cédula de ciudadanía"
+            },
+            "identification": "13832081",
+            "check_digit": "4",
+            "name": [
+                "Marcos",
+                "Castillo"
+            ],
+            "commercial_name": "Siigo",
+            "branch_office": 0,
+            "active": true,
+            "vat_responsible": true,
+            "fiscal_responsibilities": [
+                {
+                    "code": "R-99-PN",
+                    "name": "No responsable"
+                }
+            ],
+            "address": {
+                "address": "Cra. 18 #79A - 42",
+                "city": {
+                    "country_code": "Co",
+                    "country_name": "Colombia",
+                    "state_code": "19",
+                    "state_name": "Cauca",
+                    "city_code": "19001",
+                    "city_name": "Popayán"
+                },
+                "postal_code": "110911"
+            },
+            "phones": [
+                {
+                    "indicative": "57",
+                    "number": "3006003345",
+                    "extension": "132"
+                }
+            ],
+            "contacts": [
+                {
+                    "first_name": "Marcos",
+                    "last_name": "Castillo",
+                    "email": "marcos.castillo@contacto.com",
+                    "phone": {
+                        "indicative": "57",
+                        "number": "3006003345",
+                        "extension": "132"
+                    }
+                }
+            ],
+            "comments": "Comentarios",
+            "related_users": {
+                "seller_id": 629,
+                "collector_id": 629
+            },
+            "metadata": {
+                "created": "2020-06-15T03:33:17.208Z",
+                "last_updated": "null"
+            }
+        },
+        {
+            "id": "6b6ceb28-b2eb-4b98-b3dd-26648a933c82",
+            "type": "Personal",
+            "person_type": "Person",
+            "id_type": {
+                "code": "13",
+                "name": "Cédula de ciudadanía"
+            },
+            "identification": "13832081",
+            "check_digit": "4",
+            "name": [
+                "Marcos",
+                "Castillo"
+            ],
+            "commercial_name": "Siigo",
+            "branch_office": 0,
+            "active": true,
+            "vat_responsible": true,
+            "fiscal_responsibilities": [
+                {
+                    "code": "R-99-PN",
+                    "name": "No responsable"
+                }
+            ],
+            "address": {
+                "address": "Cra. 18 #79A - 42",
+                "city": {
+                    "country_code": "Co",
+                    "country_name": "Colombia",
+                    "state_code": "19",
+                    "state_name": "Cauca",
+                    "city_code": "19001",
+                    "city_name": "Popayán"
+                },
+                "postal_code": "110911"
+            },
+            "phones": [
+                {
+                    "indicative": "57",
+                    "number": "3006003345",
+                    "extension": "132"
+                }
+            ],
+            "contacts": [
+                {
+                    "first_name": "Marcos",
+                    "last_name": "Castillo",
+                    "email": "marcos.castillo@contacto.com",
+                    "phone": {
+                        "indicative": "57",
+                        "number": "3006003345",
+                        "extension": "132"
+                    }
+                }
+            ],
+            "comments": "Comentarios",
+            "related_users": {
+                "seller_id": 629,
+                "collector_id": 629
+            },
+            "metadata": {
+                "created": "2020-06-15T03:33:17.208Z",
+                "last_updated": "null"
+            }
+        }
+        ,{
+            "id": "6b6ceb28-b2eb-4b98-b3dd-26648a933c82",
+            "type": "Personal",
+            "person_type": "Person",
+            "id_type": {
+                "code": "13",
+                "name": "Cédula de ciudadanía"
+            },
+            "identification": "13832081",
+            "check_digit": "4",
+            "name": [
+                "Marcos",
+                "Castillo"
+            ],
+            "commercial_name": "Siigo",
+            "branch_office": 0,
+            "active": true,
+            "vat_responsible": true,
+            "fiscal_responsibilities": [
+                {
+                    "code": "R-99-PN",
+                    "name": "No responsable"
+                }
+            ],
+            "address": {
+                "address": "Cra. 18 #79A - 42",
+                "city": {
+                    "country_code": "Co",
+                    "country_name": "Colombia",
+                    "state_code": "19",
+                    "state_name": "Cauca",
+                    "city_code": "19001",
+                    "city_name": "Popayán"
+                },
+                "postal_code": "110911"
+            },
+            "phones": [
+                {
+                    "indicative": "57",
+                    "number": "3006003345",
+                    "extension": "132"
+                }
+            ],
+            "contacts": [
+                {
+                    "first_name": "Marcos",
+                    "last_name": "Castillo",
+                    "email": "marcos.castillo@contacto.com",
+                    "phone": {
+                        "indicative": "57",
+                        "number": "3006003345",
+                        "extension": "132"
+                    }
+                }
+            ],
+            "comments": "Comentarios",
+            "related_users": {
+                "seller_id": 629,
+                "collector_id": 629
+            },
+            "metadata": {
+                "created": "2020-06-15T03:33:17.208Z",
+                "last_updated": "null"
+            }
+        },
+        {
+            "id": "6b6ceb28-b2eb-4b98-b3dd-26648a933c82",
+            "type": "Personal",
+            "person_type": "Person",
+            "id_type": {
+                "code": "13",
+                "name": "Cédula de ciudadanía"
+            },
+            "identification": "13832081",
+            "check_digit": "4",
+            "name": [
+                "Marcos",
+                "Castillo"
+            ],
+            "commercial_name": "Siigo",
+            "branch_office": 0,
+            "active": true,
+            "vat_responsible": true,
+            "fiscal_responsibilities": [
+                {
+                    "code": "R-99-PN",
+                    "name": "No responsable"
+                }
+            ],
+            "address": {
+                "address": "Cra. 18 #79A - 42",
+                "city": {
+                    "country_code": "Co",
+                    "country_name": "Colombia",
+                    "state_code": "19",
+                    "state_name": "Cauca",
+                    "city_code": "19001",
+                    "city_name": "Popayán"
+                },
+                "postal_code": "110911"
+            },
+            "phones": [
+                {
+                    "indicative": "57",
+                    "number": "3006003345",
+                    "extension": "132"
+                }
+            ],
+            "contacts": [
+                {
+                    "first_name": "Marcos",
+                    "last_name": "Castillo",
+                    "email": "marcos.castillo@contacto.com",
+                    "phone": {
+                        "indicative": "57",
+                        "number": "3006003345",
+                        "extension": "132"
+                    }
+                }
+            ],
+            "comments": "Comentarios",
+            "related_users": {
+                "seller_id": 629,
+                "collector_id": 629
+            },
+            "metadata": {
+                "created": "2020-06-15T03:33:17.208Z",
+                "last_updated": "null"
+            }
+        },
+        {
+            "id": "6b6ceb28-b2eb-4b98-b3dd-26648a933c82",
+            "type": "Personal",
+            "person_type": "Person",
+            "id_type": {
+                "code": "13",
+                "name": "Cédula de ciudadanía"
+            },
+            "identification": "13832081",
+            "check_digit": "4",
+            "name": [
+                "Marcos",
+                "Castillo"
+            ],
+            "commercial_name": "Siigo",
+            "branch_office": 0,
+            "active": true,
+            "vat_responsible": true,
+            "fiscal_responsibilities": [
+                {
+                    "code": "R-99-PN",
+                    "name": "No responsable"
+                }
+            ],
+            "address": {
+                "address": "Cra. 18 #79A - 42",
+                "city": {
+                    "country_code": "Co",
+                    "country_name": "Colombia",
+                    "state_code": "19",
+                    "state_name": "Cauca",
+                    "city_code": "19001",
+                    "city_name": "Popayán"
+                },
+                "postal_code": "110911"
+            },
+            "phones": [
+                {
+                    "indicative": "57",
+                    "number": "3006003345",
+                    "extension": "132"
+                }
+            ],
+            "contacts": [
+                {
+                    "first_name": "Marcos",
+                    "last_name": "Castillo",
+                    "email": "marcos.castillo@contacto.com",
+                    "phone": {
+                        "indicative": "57",
+                        "number": "3006003345",
+                        "extension": "132"
+                    }
+                }
+            ],
+            "comments": "Comentarios",
+            "related_users": {
+                "seller_id": 629,
+                "collector_id": 629
+            },
+            "metadata": {
+                "created": "2020-06-15T03:33:17.208Z",
+                "last_updated": "null"
+            }
+        },
+        {
+            "id": "6b6ceb28-b2eb-4b98-b3dd-26648a933c82",
+            "type": "Personal",
+            "person_type": "Person",
+            "id_type": {
+                "code": "13",
+                "name": "Cédula de ciudadanía"
+            },
+            "identification": "13832081",
+            "check_digit": "4",
+            "name": [
+                "Marcos",
+                "Castillo"
+            ],
+            "commercial_name": "Siigo",
+            "branch_office": 0,
+            "active": true,
+            "vat_responsible": true,
+            "fiscal_responsibilities": [
+                {
+                    "code": "R-99-PN",
+                    "name": "No responsable"
+                }
+            ],
+            "address": {
+                "address": "Cra. 18 #79A - 42",
+                "city": {
+                    "country_code": "Co",
+                    "country_name": "Colombia",
+                    "state_code": "19",
+                    "state_name": "Cauca",
+                    "city_code": "19001",
+                    "city_name": "Popayán"
+                },
+                "postal_code": "110911"
+            },
+            "phones": [
+                {
+                    "indicative": "57",
+                    "number": "3006003345",
+                    "extension": "132"
+                }
+            ],
+            "contacts": [
+                {
+                    "first_name": "Marcos",
+                    "last_name": "Castillo",
+                    "email": "marcos.castillo@contacto.com",
+                    "phone": {
+                        "indicative": "57",
+                        "number": "3006003345",
+                        "extension": "132"
+                    }
+                }
+            ],
+            "comments": "Comentarios",
+            "related_users": {
+                "seller_id": 629,
+                "collector_id": 629
+            },
+            "metadata": {
+                "created": "2020-06-15T03:33:17.208Z",
+                "last_updated": "null"
+            }
+        },
+        {
+            "id": "6b6ceb28-b2eb-4b98-b3dd-26648a933c82",
+            "type": "Personal",
+            "person_type": "Person",
+            "id_type": {
+                "code": "13",
+                "name": "Cédula de ciudadanía"
+            },
+            "identification": "13832081",
+            "check_digit": "4",
+            "name": [
+                "Marcos",
+                "Castillo"
+            ],
+            "commercial_name": "Siigo",
+            "branch_office": 0,
+            "active": true,
+            "vat_responsible": true,
+            "fiscal_responsibilities": [
+                {
+                    "code": "R-99-PN",
+                    "name": "No responsable"
+                }
+            ],
+            "address": {
+                "address": "Cra. 18 #79A - 42",
+                "city": {
+                    "country_code": "Co",
+                    "country_name": "Colombia",
+                    "state_code": "19",
+                    "state_name": "Cauca",
+                    "city_code": "19001",
+                    "city_name": "Popayán"
+                },
+                "postal_code": "110911"
+            },
+            "phones": [
+                {
+                    "indicative": "57",
+                    "number": "3006003345",
+                    "extension": "132"
+                }
+            ],
+            "contacts": [
+                {
+                    "first_name": "Marcos",
+                    "last_name": "Castillo",
+                    "email": "marcos.castillo@contacto.com",
+                    "phone": {
+                        "indicative": "57",
+                        "number": "3006003345",
+                        "extension": "132"
+                    }
+                }
+            ],
+            "comments": "Comentarios",
+            "related_users": {
+                "seller_id": 629,
+                "collector_id": 629
+            },
+            "metadata": {
+                "created": "2020-06-15T03:33:17.208Z",
+                "last_updated": "null"
+            }
+        }
+    ],
+    "_links": {
+        "previous": {
+            "href": "https://api.siigo.com/v1/customers?page=4&page_size=25"
+        },
+        "self": {
+            "href": "https://api.siigo.com/v1/customers?page=5&page_size=25"
+        },
+        "next": {
+            "href": "https://api.siigo.com/v1/customers?page=6&page_size=25"
+        }
+    }
+}
