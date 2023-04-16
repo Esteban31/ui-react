@@ -1,27 +1,27 @@
-import {useState, useEffect} from 'react'
-import data from "../data.json"
+import {useState, useEffect, Component} from 'react'
+// import data from "../data.json"
 import { useNavigate } from 'react-router-dom';
 import axios from "axios"
-
-
 
 
 function Table(){
 
     const [word, setWord] = useState("");
     const [rows, setRows] = useState([])
+    const [generalResults, setgeneralResults] = useState([])
     const [pages, setPages] = useState([])
     const navigate = useNavigate();
 
 
     useEffect(() => {
-        loadData(data)
-        loadPages()
+        loadData()
+        // loadPages()
     },[]);
 
 
 
-    const getToken = async() =>{
+    // LOAD FULL DATA
+    const loadData = async() =>{
 
         const config={
             headers:{
@@ -34,51 +34,25 @@ function Table(){
             "access_key": "YmM0ZDVhOTktMTE1Yi00NWFlLTkzNTItMTcwY2ZkYWI4YTdmOmROdVF4KTA0NlA="
         }
 
-        const req = await axios.post("https://api.siigo.com/auth",body, config)
+        const req = await axios.post("https://private-anon-d4b9efd372-siigoapi.apiary-proxy.com/auth",body, config)
+        // setToken(req.data.access_token)
+        
 
-        console.log(req)
-    }
-
-
-
-    //LOAD DATA FUNCTION
-    const loadData = async (data) => {
-
-        getToken()
-
-        // const config = {
-        //     headers:{
-        //         Authorization: "",
-        //     }
-        // };
-
-        // const token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IkQ3OTkxNEU2MTJFRkI4NjE5RDNFQ0U4REFGQTU0RDFBMDdCQjM5QjJSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6IjE1a1U1aEx2dUdHZFBzNk5yNlZOR2dlN09iSSJ9.eyJuYmYiOjE2ODE1ODc4MDQsImV4cCI6MTY4MTY3NDIwNCwiaXNzIjoiaHR0cDovL21zLXNlY3VyaXR5c2VydmljZTo1MDAwIiwiYXVkIjoiaHR0cDovL21zLXNlY3VyaXR5c2VydmljZTo1MDAwL3Jlc291cmNlcyIsImNsaWVudF9pZCI6IlNpaWdvQVBJIiwic3ViIjoiMTE5NjI4MSIsImF1dGhfdGltZSI6MTY4MTU4NzgwNCwiaWRwIjoibG9jYWwiLCJuYW1lIjoiZGlyb3BlcmF0aXZhQGRpbmFtaWNhdGVjbm9sb2dpY2EuY29tIiwibWFpbF9zaWlnbyI6ImRpcm9wZXJhdGl2YUBkaW5hbWljYXRlY25vbG9naWNhLmNvbSIsImNsb3VkX3RlbmFudF9jb21wYW55X2tleSI6IkRJTkFNSUNBVEVDTk9MT0dJQ0FTQVMiLCJ1c2Vyc19pZCI6IjI1NTIiLCJ0ZW5hbnRfaWQiOiIweDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMjEwMjk1IiwidXNlcl9saWNlbnNlX3R5cGUiOiIwIiwicGxhbl90eXBlIjoiMTQiLCJ0ZW5hbnRfc3RhdGUiOiIxIiwibXVsdGl0ZW5hbnRfaWQiOiIxNTMiLCJjb21wYW5pZXMiOiIwIiwiYXBpX3N1YnNjcmlwdGlvbl9rZXkiOiI1ODRiNDczYzA0YTU0OTI5YWVlMDdlZjc1YmUyOGMzZiIsImFjY291bnRhbnQiOiJmYWxzZSIsImp0aSI6IjVGNTlENTM4QjExQ0FDQkFGMDg2QjNDOTIzOURCNDE0IiwiaWF0IjoxNjgxNTg3ODA0LCJzY29wZSI6WyJTaWlnb0FQSSJdLCJhbXIiOlsiY3VzdG9tIl19.BZaEtcP6WRIVSYbY79wJ7wv_zLJUT8TvGdSY3SzAScDI2Zh0Ti2gCLUks8QQorMs48BtWg7P4nSufEmH7JTLmrkJ8Y8xqRes2SQPM3iM7gMO20tccHJogh7LAze2gsY_bWyqc9skXwif7OZsoDmh_qz-hPhebX-LKjvL0_Kmv-2jAhClDPBPTL34WO0YSYTCTlWKWJzEnDbCmNpAE-us-Axiz5v1ibet3TUi6ZfB3Vn0UBczgvPXj28ZytBkyQzcmQH3iJQum4mTSBaoZKl72gEypy7MIyQvcVn-E2Gk2YWpXTuMVjPzDeyJ7CutW-Wb2VX84XXTJ36CWw17ul5vAQ"
-
-        // // // const req = await axios.get("https://api.siigo.com/v1/invoices", {} ,config)
+        const req2 = await axios.get('https://private-anon-d4b9efd372-siigoapi.apiary-proxy.com/v1/customers?created_start=2021-02-17', {
+            headers: {
+                'Authorization': `Bearer ${req.data.access_token}`
+            }
+        })
 
 
-        // const req = await axios.post('https://api.siigo.com/v1/invoices', { hello: 'world' }, {
-        // headers: {
-        //     // 'application/json' is the modern content-type for JSON, but some
-        //     // older servers may use 'text/json'.
-        //     // See: http://bit.ly/text-json
-        //     'Authorization':token,
-        //     'content-type': 'text/json',
-        //     'Access-Control-Allow-Origin': '*',
-        //     'origin':'x-requested-with',
-        // }
-        // });
-
-        // console.log(req)
-
-        let results = data.results.map((value, index)=>
-            <tr key={value.id} style={{cursor:'pointer'}} onClick={() => navigate('detail/'+value.name[0]+"-"+value.name[1])}>
+        let results = req2.data.results?.map((value)=>
+            <tr key={value.id} style={{cursor:'pointer'}} onClick={() => navigate('detail/'+value.identification)}>
                 <td><input type="checkbox" aria-label="Checkbox for following text input"/></td>
-                <td>{value.id}</td>
+                <td>{value.identification}</td>
                 <td>{value.name[0]+" "+value.name[1]}</td>
                 <td>{value.contacts[0].email}</td>
                 <td>{value.contacts[0].phone.number}</td>
-                <td>{value.address.city.city_name}</td>
+                <td>{value.address.address}</td>
                 <td>nn</td>
                 <td>nn</td>
                 <td>nn</td>
@@ -88,25 +62,26 @@ function Table(){
             </tr>
         )
         setRows(results)
+        setgeneralResults(req2.data)
+        loadPages()
     }
 
-    
 
     //SEARCH FUNCTION 
     const search = ((e)=>{
         setWord(e.target.value)
-        const newData = data.results.filter(function(item){
+        const newData = generalResults.results.filter(function(item){
             const itemData = item.type.toLowerCase()
             const wordToFind = word.toLowerCase()
 
 
             //Another filters
             const type = item.type.toLowerCase()
-            const firstName = item.name[0].toLowerCase()
-            const lastname = item.name[1].toLowerCase()
+            const firstName = item.name[0]?.toLowerCase()
+            const lastname = item.name[1]?.toLowerCase()
             const email = item.contacts[0].email.toLowerCase()
-            const contactNumber = item.contacts[0].phone.number.toLowerCase()
-            const city = item.address.city.city_name.toLowerCase()
+            const contactNumber = item.contacts[0]?.phone?.number?.toLowerCase()
+            const city = item.address.address.toLowerCase()
             const id = item.id.toLowerCase()
 
             const generalField = type+" "+firstName+" "+lastname+" "+email+" "+contactNumber+" "+city+" "+id
@@ -116,13 +91,13 @@ function Table(){
 
         if (e.target.value.length > 0) {//Searching...
             let results = newData.map((value)=>
-                <tr key={value.id} style={{cursor:'pointer'}} onClick={() => navigate('detail/'+value.name[0]+"-"+value.name[1])}>
+                <tr key={value.id} style={{cursor:'pointer'}} onClick={() => navigate('detail/'+value.identification)}>
                     <td><input type="checkbox" aria-label="Checkbox for following text input"/></td>
-                    <td>{value.id}</td>
+                    <td>{value.identification}</td>
                     <td>{value.name[0]+" "+value.name[1]}</td>
                     <td>{value.contacts[0].email}</td>
                     <td>{value.contacts[0].phone.number}</td>
-                    <td>{value.address.city.city_name}</td>
+                    <td>{value.address.address}</td>
                     <td>nn</td>
                     <td>nn</td>
                     <td>nn</td>
@@ -133,7 +108,7 @@ function Table(){
             )
             setRows(results)
         }else{//Not Searching...
-            loadData(data)
+            loadData()
         }
 
         
@@ -142,7 +117,7 @@ function Table(){
 
     //LOAD PAGINATION
     const loadPages = () => {
-        let totalpage = data.pagination.total_results/data.pagination.page_size
+        let totalpage = generalResults?.pagination.total_results/generalResults.pagination.page_size
         let element = []
         
 
@@ -169,29 +144,31 @@ function Table(){
                     </div>
                 </div>
                 <br />
-                <table className="table table-striped" style={{fontSize:'10px'}}>
-                    <thead>
-                        <tr>
-                            <th><input type="checkbox" aria-label="Checkbox for following text input"/></th>
-                            <th>ID. Aportante</th>
-                            <th>Nombre del Aportante</th>
-                            <th>E-mail</th>
-                            <th>Número de contacto</th>
-                            <th>Ciudad o Municipio</th>
-                            <th>Última fecha de expedición de PILA</th>
-                            <th>Canal de Expedición de Pila</th>
-                            <th>Lugar de Expedición de Pila</th>
-                            <th>Realizó la última PILA</th>
-                            <th>Nombre del Autorizado</th>
-                            <th>Operario</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {rows}
-                    </tbody>
-                </table>
+                { rows.length>0 ? (
+                    <table className="table table-striped shadow-el" style={{fontSize:'10px'}}>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" aria-label="Checkbox for following text input"/></th>
+                                <th>ID. Aportante</th>
+                                <th>Nombre del Aportante</th>
+                                <th>E-mail</th>
+                                <th>Número de contacto</th>
+                                <th>Ciudad o Municipio</th>
+                                <th>Última fecha de expedición de PILA</th>
+                                <th>Canal de Expedición de Pila</th>
+                                <th>Lugar de Expedición de Pila</th>
+                                <th>Realizó la última PILA</th>
+                                <th>Nombre del Autorizado</th>
+                                <th>Operario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {rows}
+                        </tbody>
+                    </table>
+                    ):null}
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination pagination-sm justify-content-end">
+                    <ul class="pagination pagination-sm justify-content-center">
                         <li class="page-item disabled">
                             <a class="page-link" href="#" tabIndex={-1}>Anterior</a>
                         </li>
