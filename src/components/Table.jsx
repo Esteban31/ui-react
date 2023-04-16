@@ -63,7 +63,18 @@ function Table(){
         )
         setRows(results)
         setgeneralResults(req2.data)
-        loadPages()
+        
+
+        let totalpage = req2.data?.pagination.total_results/req2.data.pagination.page_size
+        let element = []
+        
+
+        for (let index = 1; index <= Math.round(totalpage); index++) {
+            element.push(<li key={index} class="page-item"><a class="page-link" href="#" style={{color:'black', textDecoration:'none'}}>{index}</a></li>)
+        }
+
+        setPages(element)
+
     }
 
 
@@ -113,21 +124,6 @@ function Table(){
 
         
     })
-
-
-    //LOAD PAGINATION
-    const loadPages = () => {
-        let totalpage = generalResults?.pagination.total_results/generalResults.pagination.page_size
-        let element = []
-        
-
-        for (let index = 1; index <= Math.round(totalpage); index++) {
-            element.push(<li key={index} class="page-item"><a class="page-link" href="#" style={{color:'black', textDecoration:'none'}}>{index}</a></li>)
-        }
-
-        setPages(element)
-
-    }
 
 
     return (

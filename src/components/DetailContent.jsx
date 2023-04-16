@@ -8,14 +8,64 @@ import { useParams } from 'react-router-dom';
 function DetailContent(){
 
     const [detailData, setDetailData] = useState([])
+    const [customerInfo, setCustomerInfo] = useState([])
+    const [customerName, setCustomerName] = useState(null)
+
+
     let { id } = useParams();
 
 
     useEffect(()=>{
         getDetailData()
+        getCustomerInfo()
     },[])
 
+    // GET CUSTOMER INFO
+    const getCustomerInfo = async() => {
+        
+        const config={
+            headers:{
+                " Access-Control-Allow-Origin": "*"
+            }
+        }
 
+        const body={
+            "username": "diroperativa@dinamicatecnologica.com",
+            "access_key": "YmM0ZDVhOTktMTE1Yi00NWFlLTkzNTItMTcwY2ZkYWI4YTdmOmROdVF4KTA0NlA="
+        }
+
+        const req = await axios.post("https://private-anon-d4b9efd372-siigoapi.apiary-proxy.com/auth",body, config)
+        
+
+        const req2 = await axios.get('https://private-anon-d4b9efd372-siigoapi.apiary-proxy.com/v1/customers?identification='+id, {
+            headers: {
+                'Authorization': `Bearer ${req.data.access_token}`
+            }
+        })
+
+        let results = req2.data.results.map((value)=>
+            <tr key={value.id}>
+                <td>nn</td>
+                <td>nn</td>
+                <td>nn</td>
+                <td>nn</td>
+                <td>nn</td>
+                <td>{value.phones[0]?.number}</td>
+                <td>{value.address.address}</td>
+                <td>{value.address.city.city_code}</td>
+                <td>{value.address.city.city_name}</td>
+                <td>nn</td>
+                <td>nn</td>
+            </tr>
+        )
+        setCustomerInfo(results)
+        setCustomerName(req2.data.results[0].name[0])
+
+    }
+
+
+
+    // GET DETAIL INVOICES FROM CUSTOMER
     const getDetailData = async()=>{
         
         const config={
@@ -30,7 +80,8 @@ function DetailContent(){
         }
 
         const req = await axios.post("https://private-anon-d4b9efd372-siigoapi.apiary-proxy.com/auth",body, config)
-        // setToken(req.data.access_token)
+
+        console.log(req.data.access_token)
         
 
         const req2 = await axios.get('https://private-anon-d4b9efd372-siigoapi.apiary-proxy.com/v1/invoices?customer_identification='+id, {
@@ -40,7 +91,21 @@ function DetailContent(){
         })
 
 
-        console.log(req2)
+        let results = req2.data.results.map((value)=>
+            <tr key={value.id}>
+                <td>{value.metadata.created}</td>
+                <td>{value.date}</td>
+                <td>nn</td>
+                <td>nn</td>
+                <td>nn</td>
+                <td>{value.customer.id}</td>
+                <td>nn</td>
+                <td>nn</td>
+                <td>dn</td>
+                <td><i className="fas fa-book"></i></td>
+            </tr>
+        )
+        setDetailData(results)
 
     }
 
@@ -65,7 +130,7 @@ function DetailContent(){
                                 </div>
                                 <div className="col-md-6">
                                     <center>
-                                        <p class="card-text">Nombre del Cliente</p>
+                                        <p class="card-text">{customerName}</p>
                                         <p class="card-text">CC: {id}</p>
                                     </center>
                                 </div>
@@ -89,7 +154,7 @@ function DetailContent(){
                                 </tr>
                             </thead>
                             <tbody>
-                                {/* {detailData} */}
+                                {customerInfo}
                             </tbody>
                         </table>
 
@@ -97,7 +162,7 @@ function DetailContent(){
 
                     <div className="table-responsive" style={{padding:'2%', overflow:'none'}}>
                         <br />
-                        { !detailData.length>0 ? (
+                        { detailData.length>0 ? (
                             <table className="table table-striped" style={{fontSize:'10px'}}>
                                 <thead>
                                     <tr>
